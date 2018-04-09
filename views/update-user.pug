@@ -1,0 +1,9 @@
+extends layout
+
+block form
+    h3= user
+    form(method='POST', action=`/users/${path}?_method=PUT`)
+        .form-group
+            label(for='name') Name
+            input#name.form-control(type='text', aria-describedby='emailHelp', placeholder='Enter Name', name="name")
+        button.btn.btn-primary(type='submit') Submit

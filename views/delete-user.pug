@@ -1,0 +1,9 @@
+extends layout
+
+block form
+    h3= id
+    form(method='POST', action=`/users/${numb}?_method=DELETE`)
+        .form-group
+            label(for='id') Name
+            input#id.form-control(type='text', aria-describedby='emailHelp', placeholder='Enter number' name="id")
+        button.btn.btn-primary(type='submit') Submit
